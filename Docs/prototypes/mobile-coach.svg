@@ -1,0 +1,75 @@
+<svg viewBox="0 0 680 640" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>产品经理 AI 教练手机原型 - 两屏</title>
+  <desc>左屏为侧边栏收起的对话界面，右屏为侧边栏展开的课程抽屉，含登录、添加课程与带进度条的历史课程。</desc>
+  <defs>
+    <style>
+      .ph{fill:#FFFFFF;stroke:#E4E2DD;stroke-width:1}
+      .ln{stroke:#E4E2DD;stroke-width:1}
+      .ink{fill:#2C2C2A}
+      .sub{fill:#5F5E5A}
+      .mut{fill:#8A8880}
+      .ac{fill:#534AB7}
+      .acsoft{fill:#EEEDFE}
+      .track{fill:#ECEAE5}
+      .t{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif}
+    </style>
+  </defs>
+  <!-- Phone 1: chat (sidebar collapsed) -->
+  <rect class="ph" x="20" y="20" width="300" height="600" rx="30"/>
+  <rect x="110" y="34" width="120" height="14" rx="7" fill="#1c1c1e"/>
+  <text x="44" y="78" class="t sub" font-size="12">9:41</text>
+  <text x="276" y="78" class="t sub" font-size="12">5G ▮</text>
+  <line class="ln" x1="20" y1="96" x2="320" y2="96"/>
+  <g class="ink">
+    <rect x="44" y="110" width="18" height="2.5" rx="1.2"/>
+    <rect x="44" y="117" width="18" height="2.5" rx="1.2"/>
+    <rect x="44" y="124" width="18" height="2.5" rx="1.2"/>
+  </g>
+  <text x="170" y="124" class="t ink" font-size="15" font-weight="500" text-anchor="middle">产品经理教练</text>
+  <circle cx="286" cy="118" r="13" class="ac"/><text x="286" y="122" class="t" font-size="10" fill="#fff" text-anchor="middle">LY</text>
+  <line class="ln" x1="20" y1="142" x2="320" y2="142"/>
+  <rect x="44" y="160" width="210" height="56" rx="16" class="acsoft"/>
+  <text x="58" y="182" class="t ink" font-size="13">我们先从第一层·定位开始。</text>
+  <text x="58" y="202" class="t ink" font-size="13">你目前站在哪个位置？</text>
+  <rect x="110" y="232" width="170" height="68" rx="16" class="ac"/>
+  <text x="124" y="254" class="t" font-size="13" fill="#fff">我在一家做工具类 App</text>
+  <text x="124" y="274" class="t" font-size="13" fill="#fff">的公司，每天写 PRD、跟</text>
+  <text x="124" y="294" class="t" font-size="13" fill="#fff">研发对需求。</text>
+  <rect x="44" y="320" width="220" height="56" rx="16" class="acsoft"/>
+  <text x="58" y="342" class="t ink" font-size="13">很好。那日常里，哪件事让</text>
+  <text x="58" y="362" class="t ink" font-size="13">你最没掌控感？</text>
+  <rect x="40" y="540" width="260" height="46" rx="23" fill="#fff" stroke="#E4E2DD"/>
+  <text x="58" y="568" class="t mut" font-size="14">说点什么…</text>
+  <circle cx="282" cy="563" r="18" class="ac"/>
+  <path d="M276 556 l12 7 -12 7 z" fill="#fff"/>
+  <!-- Phone 2: sidebar expanded -->
+  <rect class="ph" x="360" y="20" width="300" height="600" rx="30"/>
+  <rect x="610" y="34" width="50" height="586" rx="0" fill="#EDEBE7"/>
+  <rect x="610" y="34" width="50" height="586" fill="#EDEBE7" opacity="0"/>
+  <rect x="610" y="34" width="44" height="586" fill="#EDEBE7"/>
+  <circle cx="398" cy="74" r="22" class="ac"/><text x="398" y="78" class="t" font-size="13" fill="#fff" text-anchor="middle">LY</text>
+  <text x="432" y="68" class="t ink" font-size="15" font-weight="500">LYJ</text>
+  <text x="432" y="88" class="t sub" font-size="12">已登录 · lyj@mail.com</text>
+  <line class="ln" x1="360" y1="112" x2="610" y2="112"/>
+  <rect x="380" y="128" width="210" height="44" rx="12" class="ac"/>
+  <text x="485" y="155" class="t" font-size="14" fill="#fff" text-anchor="middle">＋ 添加新课程</text>
+  <text x="380" y="206" class="t sub" font-size="13">历史课程</text>
+  <text x="380" y="240" class="t ink" font-size="14">产品经理教练</text>
+  <text x="580" y="240" class="t ac" font-size="13" font-weight="500" text-anchor="end">18%</text>
+  <rect x="380" y="250" width="200" height="6" rx="3" class="track"/>
+  <rect x="380" y="250" width="36" height="6" rx="3" class="ac"/>
+  <text x="380" y="298" class="t ink" font-size="14">跑步训练计划</text>
+  <text x="580" y="298" class="t ac" font-size="13" font-weight="500" text-anchor="end">64%</text>
+  <rect x="380" y="308" width="200" height="6" rx="3" class="track"/>
+  <rect x="380" y="308" width="128" height="6" rx="3" class="ac"/>
+  <text x="380" y="356" class="t ink" font-size="14">英语口语陪练</text>
+  <text x="580" y="356" class="t ac" font-size="13" font-weight="500" text-anchor="end">92%</text>
+  <rect x="380" y="366" width="200" height="6" rx="3" class="track"/>
+  <rect x="380" y="366" width="184" height="6" rx="3" class="ac"/>
+  <text x="380" y="414" class="t ink" font-size="14">冥想入门</text>
+  <text x="580" y="414" class="t ac" font-size="13" font-weight="500" text-anchor="end">7%</text>
+  <rect x="380" y="424" width="200" height="6" rx="3" class="track"/>
+  <rect x="380" y="424" width="14" height="6" rx="3" class="ac"/>
+  <circle cx="632" cy="74" r="13" fill="#fff" stroke="#E4E2DD"/>
+  <text x="632" y="79" class="t sub" font-size="13" text-anchor="middle">✕</text>
+</svg>
