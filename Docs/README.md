@@ -10,4 +10,9 @@
 - [早期 AI 生成原型](prototypes/initial-ai-prototype.png)：历史参考，不是最终视觉依据。
 - [原型说明](prototypes/README.md)。
 
-当前只有文档与原型，没有应用实现。已同步框架标记、SQLite、整体/深入阶段及位置记忆；推进交互和进度细节仍待确认。
+当前已实现第一版应用，运行与测试见下方说明。已同步框架标记、SQLite、整体/深入阶段及位置记忆；推进交互及进度细节采用实现决策中的可调整默认值。
+
+- [运行与部署说明](RUNNING.md)
+- [HTTP API](API.md)
+- [第一版实现决策](decisions/001-FIRST_RELEASE.md)
+- [验证记录](VALIDATION.md)
