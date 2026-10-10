@@ -10,6 +10,7 @@
     "dev": "tsx watch apps/server/src/bootstrap/main.ts",
     "dev:web": "vite --config apps/web/vite.config.ts",
     "build": "vite build --config apps/web/vite.config.ts",
+    "build:demo": "VITE_STATIC_DEMO=1 vite build --config apps/web/vite.config.ts --outDir ../../dist/demo",
     "start": "tsx apps/server/src/bootstrap/main.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

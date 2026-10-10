@@ -6,6 +6,16 @@ export interface Session {
   accountName: string;
   demo: boolean;
 }
+export interface CoachClient {
+  session(): Promise<Session>;
+  login(password: string): Promise<unknown>;
+  logout(): Promise<unknown>;
+  list(): Promise<CourseList>;
+  course(id: string): Promise<CourseView>;
+  create(name: string, framework: string, materials: string): Promise<CourseView>;
+  send(id: string, requestId: string, content: string): Promise<CourseView>;
+  advance(id: string, operationId: string, version: number): Promise<CourseView>;
+}
 export class ApiError extends Error {
   constructor(
     message: string,
@@ -15,7 +25,7 @@ export class ApiError extends Error {
   }
 }
 /** Browser client: credentials are opaque HttpOnly cookies, never model keys. */
-export class CoachApi {
+export class CoachApi implements CoachClient {
   private async request<T>(path: string, body?: unknown): Promise<T> {
     const response = await fetch(`/api${path}`, {
       method: body === undefined ? 'GET' : 'POST',

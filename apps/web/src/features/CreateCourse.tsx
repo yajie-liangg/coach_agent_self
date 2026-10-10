@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
-import type { CoachApi, CourseView } from '../api/client.js';
+import type { CoachClient, CourseView } from '../api/client.js';
 interface Props {
-  api: CoachApi;
+  api: CoachClient;
   onCreated: (course: CourseView) => void;
   onClose: () => void;
 }

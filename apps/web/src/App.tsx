@@ -2,14 +2,17 @@ import { useState, useEffect, useRef } from 'react';
 import {
   CoachApi,
   ApiError,
+  type CoachClient,
   type Session,
   type CourseView,
   type CourseList,
 } from './api/client.js';
+import { DemoCoachApi } from './api/demo.js';
 import { Sidebar } from './features/Sidebar.js';
 import { Chat } from './features/Chat.js';
 import { CreateCourse } from './features/CreateCourse.js';
-const api = new CoachApi();
+const api: CoachClient =
+  import.meta.env.VITE_STATIC_DEMO === '1' ? new DemoCoachApi() : new CoachApi();
 export default function App() {
   const [session, setSession] = useState<Session | null>(null);
   const [courses, setCourses] = useState<CourseList>([]);
