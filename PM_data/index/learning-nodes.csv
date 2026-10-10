@@ -1,0 +1,45 @@
+﻿node_id,title,node_type,parent_id,position,material_refs
+overview,产品经理跨书知识体系,overview,,0,pm-overview
+product-worldview,第一部分 建立产品世界观,section,overview,1,
+product-value-system,产品是解决问题的价值系统,lesson,product-worldview,2,product-value-system
+value-exchange,价值交换、成本与约束,lesson,product-worldview,3,value-exchange
+system-evolution,系统思维与产品演化,lesson,product-worldview,4,system-evolution
+market-opportunity,市场机会与竞争判断,lesson,product-worldview,5,market-opportunity
+positioning-strategy,定位、选择与产品战略,lesson,product-worldview,6,positioning-strategy
+business-lifecycle,商业模式、路线图与生命周期,lesson,product-worldview,7,business-lifecycle
+users-and-needs,第二部分 理解用户与需求,section,overview,8,
+user-models,用户分层与用户模型,lesson,users-and-needs,9,user-models
+scenes-cognition,场景、任务与认知规律,lesson,users-and-needs,10,scenes-cognition
+behavior-feedback,动机、习惯与行为反馈,lesson,users-and-needs,11,behavior-feedback
+research-evidence,用户研究与证据采集,lesson,users-and-needs,12,research-evidence
+need-truth,从表面诉求到真实问题,lesson,users-and-needs,13,need-truth
+need-priority,需求整理、优先级与边界,lesson,users-and-needs,14,need-priority
+define-and-design,第三部分 从问题到体验方案,section,overview,15,
+hypothesis-mvp,产品假设、核心价值与 MVP,lesson,define-and-design,16,hypothesis-mvp
+information-flow,信息架构、任务流与方案组织,lesson,define-and-design,17,information-flow
+interaction-experience,交互、简约与整体体验,lesson,define-and-design,18,interaction-experience
+deliver-with-technology,第四部分 把方案可靠地交付,section,overview,19,
+product-documents,BRD、MRD、PRD 与决策记录,lesson,deliver-with-technology,20,product-documents
+project-delivery,项目拆解、研发流程与上线,lesson,deliver-with-technology,21,project-delivery
+collaboration-quality,跨职能协作、测试与质量,lesson,deliver-with-technology,22,collaboration-quality
+technical-map,产品经理需要的技术地图,lesson,deliver-with-technology,23,technical-map
+architecture-tradeoffs,架构、性能、容量与取舍,lesson,deliver-with-technology,24,architecture-tradeoffs
+data-security,数据治理、安全与技术风险,lesson,deliver-with-technology,25,data-security
+verify-and-grow,第五部分 用证据迭代与增长,section,overview,26,
+metrics-system,指标体系与第一关键指标,lesson,verify-and-grow,27,metrics-system
+experiments-causality,假设、实验与因果判断,lesson,verify-and-grow,28,experiments-causality
+feedback-iteration,反馈闭环与产品迭代,lesson,verify-and-grow,29,feedback-iteration
+operations-lifecycle,运营机制与生命周期动作,lesson,verify-and-grow,30,operations-lifecycle
+growth-loop,增长模型、漏斗与增长实验,lesson,verify-and-grow,31,growth-loop
+social-spread,传播、社交与社群网络,lesson,verify-and-grow,32,social-spread
+complex-domains,第六部分 进入复杂业务场景,section,overview,33,
+b2b-modeling,B 端产品与业务建模,lesson,complex-domains,34,b2b-modeling
+ecommerce-systems,电商交易与后台系统,lesson,complex-domains,35,ecommerce-systems
+specialized-products,数据产品、广告、游戏与社交,lesson,complex-domains,36,specialized-products
+organization-and-career,第七部分 组织产品工作与个人成长,section,overview,37,
+product-governance,产品治理、组织与资源配置,lesson,organization-and-career,38,product-governance
+leadership-team,领导力、团队与跨部门影响,lesson,organization-and-career,39,leadership-team
+culture-decisions,文化、激励与决策质量,lesson,organization-and-career,40,culture-decisions
+role-career,产品经理角色与职业路径,lesson,organization-and-career,41,role-career
+working-methods,思考、沟通与工作方法,lesson,organization-and-career,42,working-methods
+interview-development,面试、作品与能力证明,lesson,organization-and-career,43,interview-development
