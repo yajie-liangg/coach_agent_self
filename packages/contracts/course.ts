@@ -7,6 +7,13 @@ export interface ChatMessage {
   status: 'pending' | 'complete' | 'failed';
   createdAt: string;
 }
+export interface CourseOutlineNode {
+  id: string;
+  title: string;
+  type: 'overview' | 'section' | 'lesson';
+  parentId: string | null;
+  body: string;
+}
 export interface CourseView {
   id: string;
   name: string;
@@ -18,5 +25,6 @@ export interface CourseView {
   total: number;
   progress: number;
   resumeQuestion: string;
+  outline: CourseOutlineNode[];
   messages: ChatMessage[];
 }

@@ -30,6 +30,7 @@ export function Chat({ course, busy, error, onSend, onAdvance }: Props) {
     }
   }
   const failed = course.messages.findLast((m) => m.role === 'user' && m.status === 'failed');
+  const sections = course.outline.filter((node) => node.type === 'section');
   return (
     <>
       <section className="messages" aria-label="学习对话" aria-live="polite">
@@ -40,11 +41,42 @@ export function Chat({ course, busy, error, onSend, onAdvance }: Props) {
               ? '框架学习已完成'
               : `当前：${course.currentTitle}`}
         </div>
-        {!course.messages.length && (
+        {course.phase === 'overview' && (
+          <article className="framework-overview">
+            <span className="welcome-symbol">✦</span>
+            <h2>先看整套知识的全貌</h2>
+            <p className="framework-intro">
+              这门课程按“发现价值 → 定义价值 → 交付价值 →
+              验证并扩大价值”展开。先理解各部分怎样连接，再决定从哪里深入。
+            </p>
+            <ol>
+              {sections.map((section) => {
+                const lessons = course.outline.filter(
+                  (node) => node.type === 'lesson' && node.parentId === section.id,
+                );
+                return (
+                  <li key={section.id}>
+                    <strong>{section.title.replace(/^第.+?部分\s*/, '')}</strong>
+                    {section.body && <p>{section.body}</p>}
+                    {!!lessons.length && (
+                      <span className="framework-lessons">
+                        {lessons.map((lesson) => lesson.title).join(' · ')}
+                      </span>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+            <p className="framework-footnote">
+              现在可以围绕整个框架自由提问。只有你点击“开始深入”，学习位置才会进入第一节点。
+            </p>
+          </article>
+        )}
+        {!course.messages.length && course.phase !== 'overview' && (
           <div className="welcome">
             <span className="welcome-symbol">✦</span>
-            <h2>{course.phase === 'overview' ? '先看全貌，再逐步深入' : '我们继续学习'}</h2>
-            <p>告诉教练你想从哪里开始，或者直接说“带我理解整体框架”。</p>
+            <h2>我们继续学习</h2>
+            <p>可以直接提问、说出理解，或联系自己的经历自由讨论。</p>
             <p className="muted small">你决定何时继续，聊天不会自动改变进度。</p>
           </div>
         )}

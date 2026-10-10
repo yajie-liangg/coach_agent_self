@@ -106,6 +106,15 @@ describe('SQLite 学习闭环', () => {
     expect(prompt).toContain('用户希望增加导出按钮');
     expect(courses.get(c.id).currentNodeId).toBe('real-needs');
   });
+  it('教练提示要求先直接回答，不用固定追问模板', async () => {
+    const { store, c } = setup();
+    const model = new FakeModel();
+    await new ChatService(store, model).send(c.id, 'q', '价值交换是什么？');
+    const instruction = model.requests[0][0].content;
+    expect(instruction).toContain('首要任务是回应用户此刻真正问的问题');
+    expect(instruction).toContain('不要机械复述用户原话');
+    expect(instruction).toContain('不懂”“都不会”时，从零讲解');
+  });
   it('无效导入不保存任何课程', () => {
     const { courses } = setup();
     expect(() =>

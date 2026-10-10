@@ -313,6 +313,47 @@ p {
   max-width: 340px;
   margin: 0 auto 14px;
 }
+.framework-overview {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
+  margin: 0 0 30px;
+  background: linear-gradient(180deg, #faf9ff 0%, #fff 100%);
+}
+.framework-overview .welcome-symbol {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.framework-overview h2 {
+  margin: 0 0 10px;
+}
+.framework-intro,
+.framework-footnote {
+  color: var(--muted);
+  line-height: 1.7;
+}
+.framework-overview ol {
+  padding-left: 24px;
+  margin: 24px 0;
+}
+.framework-overview li {
+  padding: 0 0 16px 8px;
+  line-height: 1.6;
+}
+.framework-overview li p {
+  margin: 4px 0;
+  color: var(--muted);
+}
+.framework-lessons {
+  display: block;
+  color: var(--accent);
+  font-size: 13px;
+}
+.framework-footnote {
+  margin-bottom: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
 .empty {
   margin: auto;
   max-width: 480px;

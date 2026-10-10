@@ -21,10 +21,12 @@ describe('电脑端静态试用 API', () => {
     const api = new DemoCoachApi();
     const [summary] = await api.list();
     expect(summary.name).toBe('产品经理教练');
+    expect((await api.course(summary.id)).outline).toHaveLength(7);
 
-    const discussed = await api.send(summary.id, 'request-1', '产品经理要识别真实需求');
+    const discussed = await api.send(summary.id, 'request-1', '价值交换是什么？');
     expect(discussed.messages.at(-1)?.role).toBe('assistant');
-    expect(discussed.messages.at(-1)?.content).toContain('用户问题');
+    expect(discussed.messages.at(-1)?.content).toContain('用户付出的不只是钱');
+    expect(discussed.messages.at(-1)?.content).not.toContain('你目前最有把握');
 
     const advanced = await api.advance(summary.id, 'operation-1', discussed.version);
     expect(advanced).toMatchObject({

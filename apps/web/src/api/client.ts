@@ -1,6 +1,6 @@
 import type { CourseView } from '../../../../packages/contracts/course.js';
 export type { CourseView };
-export type CourseList = Omit<CourseView, 'messages'>[];
+export type CourseList = Omit<CourseView, 'messages' | 'outline'>[];
 export interface Session {
   authenticated: boolean;
   accountName: string;

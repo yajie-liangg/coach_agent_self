@@ -4,6 +4,7 @@ import { dirname } from 'node:path';
 import { randomUUID, createHash } from 'node:crypto';
 import type { LearningRepository, StoredCourse, MemoryEntry } from '../features/repository.js';
 import type { ParsedCourse, Phase, MaterialBlock, ChatMessage } from '../features/types.js';
+import type { CourseOutlineNode } from '../../../../packages/contracts/course.js';
 /** Owns the database connection and explicit transaction boundary; callers own business rules. */
 export class SqliteStore implements LearningRepository {
   readonly db: DatabaseSync;
@@ -100,7 +101,12 @@ export class SqliteStore implements LearningRepository {
         'SELECT id,request_id AS requestId,role,content,status,created_at AS createdAt FROM messages WHERE course_id=? ORDER BY rowid',
       )
       .all(id) as unknown as ChatMessage[];
-    return { ...row, total, completed, messages } as StoredCourse;
+    const outline = this.db
+      .prepare(
+        'SELECT node_id AS id,title,node_type AS type,parent_node_id AS parentId,body FROM framework_nodes WHERE course_id=? ORDER BY position',
+      )
+      .all(id) as unknown as CourseOutlineNode[];
+    return { ...row, total, completed, outline, messages } as StoredCourse;
   }
   advanceVersion(id: string, operation: string) {
     const row = this.db

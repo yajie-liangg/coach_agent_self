@@ -17,9 +17,9 @@ export class CourseService {
     this.store.transaction(() => this.store.insertCourse(id, name.trim(), parsed));
     return this.get(id);
   }
-  list(): Omit<CourseView, 'messages'>[] {
+  list(): Omit<CourseView, 'messages' | 'outline'>[] {
     return this.store.courseIds().map((id) => {
-      const { messages, ...course } = this.get(id);
+      const { messages, outline: _outline, ...course } = this.get(id);
       return course;
     });
   }
